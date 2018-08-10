@@ -18,4 +18,4 @@ VOLUME /config
 EXPOSE 8080 8443
 
 WORKDIR /appliance
-CMD java -server -jar pwm-onejar.jar -applicationPath /config
+CMD java -server -jar ${FILE} -applicationPath /config
