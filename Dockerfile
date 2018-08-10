@@ -11,7 +11,7 @@ RUN apt-get update -y && \
 RUN mkdir /config ; mkdir /appliance
 
 # Download & deploy jar
-RUN cd /appliaction && \
+RUN cd /appliance && \
     wget https://www.pwm-project.org/artifacts/pwm/${VERSION}/${FILE}
 
 VOLUME /config
