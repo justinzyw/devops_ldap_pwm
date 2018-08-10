@@ -2,7 +2,7 @@
 FROM openjdk:11-ea-24-jre-slim
 
 ARG VERSION=2018-08-07T18_11_51Z
-ARG FILE=pwm-onejar-1.8.0-SNAPSHOT.jar
+ENV FILE=pwm-onejar-1.8.0-SNAPSHOT.jar
 
 # Install additional packages
 RUN apt-get update -y && \
