@@ -16,7 +16,7 @@ RUN cd /appliance && \
     wget https://www.pwm-project.org/artifacts/pwm/${VERSION}/${FILE}
 
 VOLUME /config
-EXPOSE 8080 8443
+EXPOSE 8443
 
 WORKDIR /appliance
 CMD java -server -jar ${FILE} -applicationPath /config
