@@ -4,6 +4,7 @@ FROM openjdk:11-ea-24-jre-slim
 ARG VERSION=2018-08-07T18_11_51Z
 
 ENV FILE=pwm-onejar-1.8.0-SNAPSHOT.jar
+ENV JVMPARM =-Xmx300m -Xms300m -Xmn150m
 
 # Install additional packages
 RUN apt-get update -y && \
@@ -19,4 +20,4 @@ VOLUME /config
 EXPOSE 8443
 
 WORKDIR /appliance
-CMD java -server -jar ${FILE} -applicationPath /config
+CMD java -server ${JVMPARM} -jar ${FILE} -applicationPath /config
